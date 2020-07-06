@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A822F207290D2EC4AE6DD99C /* Pods_WSIET.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEB3A1ED325CB64D9CAD987 /* Pods_WSIET.framework */; };
 		DCCD4E6324AB18B2001F4751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4E6224AB18B2001F4751 /* AppDelegate.swift */; };
 		DCCD4E6524AB18B2001F4751 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4E6424AB18B2001F4751 /* SceneDelegate.swift */; };
 		DCCD4E6724AB18B2001F4751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4E6624AB18B2001F4751 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DEB3A1ED325CB64D9CAD987 /* Pods_WSIET.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WSIET.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D52CD9D6B1614E2FE66758F /* Pods-WSIET.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSIET.debug.xcconfig"; path = "Target Support Files/Pods-WSIET/Pods-WSIET.debug.xcconfig"; sourceTree = "<group>"; };
+		A38D69DCB64C389343186CC0 /* Pods-WSIET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSIET.release.xcconfig"; path = "Target Support Files/Pods-WSIET/Pods-WSIET.release.xcconfig"; sourceTree = "<group>"; };
 		DCCD4E5F24AB18B2001F4751 /* WSIET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSIET.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCD4E6224AB18B2001F4751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCCD4E6424AB18B2001F4751 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A822F207290D2EC4AE6DD99C /* Pods_WSIET.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31AEDEB2B45973BC00A11C2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DEB3A1ED325CB64D9CAD987 /* Pods_WSIET.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D56F002B12080A60F3611D78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D52CD9D6B1614E2FE66758F /* Pods-WSIET.debug.xcconfig */,
+				A38D69DCB64C389343186CC0 /* Pods-WSIET.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DCCD4E5624AB18B2001F4751 = {
 			isa = PBXGroup;
 			children = (
 				DCCD4E6124AB18B2001F4751 /* WSIET */,
 				DCCD4E6024AB18B2001F4751 /* Products */,
+				D56F002B12080A60F3611D78 /* Pods */,
+				31AEDEB2B45973BC00A11C2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCCD4E7324AB18B4001F4751 /* Build configuration list for PBXNativeTarget "WSIET" */;
 			buildPhases = (
+				56DAA1D7B1E900081A6717DA /* [CP] Check Pods Manifest.lock */,
 				DCCD4E5B24AB18B2001F4751 /* Sources */,
 				DCCD4E5C24AB18B2001F4751 /* Frameworks */,
 				DCCD4E5D24AB18B2001F4751 /* Resources */,
+				D10644BB9FBCC0BBC4A93625 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56DAA1D7B1E900081A6717DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WSIET-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D10644BB9FBCC0BBC4A93625 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WSIET/Pods-WSIET-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WSIET/Pods-WSIET-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WSIET/Pods-WSIET-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DCCD4E5B24AB18B2001F4751 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		DCCD4E7424AB18B4001F4751 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D52CD9D6B1614E2FE66758F /* Pods-WSIET.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		DCCD4E7524AB18B4001F4751 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A38D69DCB64C389343186CC0 /* Pods-WSIET.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

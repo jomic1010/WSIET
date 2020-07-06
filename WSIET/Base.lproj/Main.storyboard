@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,20 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yzt-ij-l89">
-                                <rect key="frame" x="0.0" y="76" width="414" height="776"/>
+                                <rect key="frame" x="0.0" y="76" width="414" height="766"/>
                             </mapView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tN8-9z-TZR">
-                                <rect key="frame" x="20" y="49" width="134" height="22"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nnk-zP-djx">
+                                <rect key="frame" x="20" y="49" width="122" height="22"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyz-KF-X8r">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBn-NZ-96W">
                                         <rect key="frame" x="0.0" y="0.0" width="70.5" height="22"/>
                                         <state key="normal" title="Button" image="location.north.fill" catalog="system"/>
                                         <connections>
-                                            <action selector="goNowLocation" destination="BYZ-38-t0r" eventType="touchUpInside" id="yaa-Io-BUh"/>
+                                            <action selector="goNowLocation" destination="BYZ-38-t0r" eventType="touchUpInside" id="rAg-fM-nDT"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb7-pF-aAV">
-                                        <rect key="frame" x="90.5" y="0.0" width="43.5" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Add-lC-eB3">
+                                        <rect key="frame" x="78.5" y="0.0" width="43.5" height="22"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -39,17 +40,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="yzt-ij-l89" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.866071" id="4xA-Q4-gV2"/>
-                            <constraint firstItem="yzt-ij-l89" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Swv-h0-ULb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yzt-ij-l89" secondAttribute="bottom" constant="10" id="Y20-Nv-AKi"/>
-                            <constraint firstItem="yzt-ij-l89" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kES-zX-lRX"/>
+                            <constraint firstItem="yzt-ij-l89" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aUL-DJ-NBm"/>
+                            <constraint firstItem="nnk-zP-djx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bIa-55-iP2"/>
+                            <constraint firstItem="nnk-zP-djx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="bdi-GO-K4O"/>
+                            <constraint firstItem="yzt-ij-l89" firstAttribute="top" secondItem="nnk-zP-djx" secondAttribute="bottom" constant="5" id="epb-28-UBw"/>
+                            <constraint firstItem="yzt-ij-l89" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hOu-Q4-7xB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yzt-ij-l89" secondAttribute="bottom" constant="20" id="jGt-Mj-Pwf"/>
+                            <constraint firstItem="yzt-ij-l89" firstAttribute="top" secondItem="nnk-zP-djx" secondAttribute="bottom" constant="5" id="sGS-gI-4lq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="myMap" destination="yzt-ij-l89" id="8g1-Dc-VNN"/>
-                        <outlet property="nowLocation" destination="Jyz-KF-X8r" id="P7W-MA-75d"/>
-                        <outlet property="userLocation" destination="hb7-pF-aAV" id="5hx-fz-igf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
