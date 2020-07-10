@@ -3,14 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A822F207290D2EC4AE6DD99C /* Pods_WSIET.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEB3A1ED325CB64D9CAD987 /* Pods_WSIET.framework */; };
+		DCB0FC0124B471EC00044ED2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB0FC0024B471EC00044ED2 /* SearchViewController.swift */; };
+		DCB0FC0324B476C900044ED2 /* BookMarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB0FC0224B476C900044ED2 /* BookMarkTableViewController.swift */; };
+		DCB0FC0524B4777C00044ED2 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB0FC0424B4777C00044ED2 /* SettingTableViewController.swift */; };
 		DCCD4E6324AB18B2001F4751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4E6224AB18B2001F4751 /* AppDelegate.swift */; };
 		DCCD4E6524AB18B2001F4751 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4E6424AB18B2001F4751 /* SceneDelegate.swift */; };
-		DCCD4E6724AB18B2001F4751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4E6624AB18B2001F4751 /* ViewController.swift */; };
 		DCCD4E6A24AB18B2001F4751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCCD4E6824AB18B2001F4751 /* Main.storyboard */; };
 		DCCD4E6C24AB18B4001F4751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCCD4E6B24AB18B4001F4751 /* Assets.xcassets */; };
 		DCCD4E6F24AB18B4001F4751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCCD4E6D24AB18B4001F4751 /* LaunchScreen.storyboard */; };
@@ -18,16 +20,19 @@
 
 /* Begin PBXFileReference section */
 		2DEB3A1ED325CB64D9CAD987 /* Pods_WSIET.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WSIET.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D52CD9D6B1614E2FE66758F /* Pods-WSIET.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSIET.debug.xcconfig"; path = "Target Support Files/Pods-WSIET/Pods-WSIET.debug.xcconfig"; sourceTree = "<group>"; };
-		A38D69DCB64C389343186CC0 /* Pods-WSIET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSIET.release.xcconfig"; path = "Target Support Files/Pods-WSIET/Pods-WSIET.release.xcconfig"; sourceTree = "<group>"; };
+		4E9C48ACF4F3511EE3E4B456 /* Pods-WSIET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSIET.release.xcconfig"; path = "Target Support Files/Pods-WSIET/Pods-WSIET.release.xcconfig"; sourceTree = "<group>"; };
+		DCB0FC0024B471EC00044ED2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DCB0FC0224B476C900044ED2 /* BookMarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkTableViewController.swift; sourceTree = "<group>"; };
+		DCB0FC0424B4777C00044ED2 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		DCCD3C3824B882F6008BC325 /* seoul.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = seoul.gpx; sourceTree = "<group>"; };
 		DCCD4E5F24AB18B2001F4751 /* WSIET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSIET.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCD4E6224AB18B2001F4751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCCD4E6424AB18B2001F4751 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DCCD4E6624AB18B2001F4751 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DCCD4E6924AB18B2001F4751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCCD4E6B24AB18B4001F4751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCCD4E6E24AB18B4001F4751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCCD4E7024AB18B4001F4751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2CDE997CE83E79C4ED404C6 /* Pods-WSIET.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WSIET.debug.xcconfig"; path = "Target Support Files/Pods-WSIET/Pods-WSIET.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,13 +55,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D56F002B12080A60F3611D78 /* Pods */ = {
+		A6628B62A86C3FA23B5BBE42 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5D52CD9D6B1614E2FE66758F /* Pods-WSIET.debug.xcconfig */,
-				A38D69DCB64C389343186CC0 /* Pods-WSIET.release.xcconfig */,
+				F2CDE997CE83E79C4ED404C6 /* Pods-WSIET.debug.xcconfig */,
+				4E9C48ACF4F3511EE3E4B456 /* Pods-WSIET.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -65,8 +69,8 @@
 			children = (
 				DCCD4E6124AB18B2001F4751 /* WSIET */,
 				DCCD4E6024AB18B2001F4751 /* Products */,
-				D56F002B12080A60F3611D78 /* Pods */,
 				31AEDEB2B45973BC00A11C2A /* Frameworks */,
+				A6628B62A86C3FA23B5BBE42 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,8 +87,11 @@
 			children = (
 				DCCD4E6224AB18B2001F4751 /* AppDelegate.swift */,
 				DCCD4E6424AB18B2001F4751 /* SceneDelegate.swift */,
-				DCCD4E6624AB18B2001F4751 /* ViewController.swift */,
 				DCCD4E6824AB18B2001F4751 /* Main.storyboard */,
+				DCB0FC0424B4777C00044ED2 /* SettingTableViewController.swift */,
+				DCB0FC0224B476C900044ED2 /* BookMarkTableViewController.swift */,
+				DCB0FC0024B471EC00044ED2 /* SearchViewController.swift */,
+				DCCD3C3824B882F6008BC325 /* seoul.gpx */,
 				DCCD4E6B24AB18B4001F4751 /* Assets.xcassets */,
 				DCCD4E6D24AB18B4001F4751 /* LaunchScreen.storyboard */,
 				DCCD4E7024AB18B4001F4751 /* Info.plist */,
@@ -103,7 +110,7 @@
 				DCCD4E5B24AB18B2001F4751 /* Sources */,
 				DCCD4E5C24AB18B2001F4751 /* Frameworks */,
 				DCCD4E5D24AB18B2001F4751 /* Resources */,
-				D10644BB9FBCC0BBC4A93625 /* [CP] Copy Pods Resources */,
+				1B81F9E58811A0E36E16C6FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,6 +168,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1B81F9E58811A0E36E16C6FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WSIET/Pods-WSIET-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WSIET/Pods-WSIET-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WSIET/Pods-WSIET-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		56DAA1D7B1E900081A6717DA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,23 +207,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D10644BB9FBCC0BBC4A93625 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WSIET/Pods-WSIET-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WSIET/Pods-WSIET-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WSIET/Pods-WSIET-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -207,8 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCCD4E6724AB18B2001F4751 /* ViewController.swift in Sources */,
+				DCB0FC0524B4777C00044ED2 /* SettingTableViewController.swift in Sources */,
+				DCB0FC0324B476C900044ED2 /* BookMarkTableViewController.swift in Sources */,
 				DCCD4E6324AB18B2001F4751 /* AppDelegate.swift in Sources */,
+				DCB0FC0124B471EC00044ED2 /* SearchViewController.swift in Sources */,
 				DCCD4E6524AB18B2001F4751 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,7 +360,7 @@
 		};
 		DCCD4E7424AB18B4001F4751 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D52CD9D6B1614E2FE66758F /* Pods-WSIET.debug.xcconfig */;
+			baseConfigurationReference = F2CDE997CE83E79C4ED404C6 /* Pods-WSIET.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,7 +379,7 @@
 		};
 		DCCD4E7524AB18B4001F4751 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A38D69DCB64C389343186CC0 /* Pods-WSIET.release.xcconfig */;
+			baseConfigurationReference = 4E9C48ACF4F3511EE3E4B456 /* Pods-WSIET.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
