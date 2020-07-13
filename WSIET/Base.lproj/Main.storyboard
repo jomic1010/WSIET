@@ -17,7 +17,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="UFd-Ll-pFW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="검색" selectedImage="magnifyingglass" catalog="system" id="teo-AT-VcF"/>
+                    <tabBarItem key="tabBarItem" title="검색" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="teo-AT-VcF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QbW-la-ghh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,7 +46,7 @@
                             <outlet property="delegate" destination="zef-Jl-tgJ" id="vIN-Uo-8lG"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="즐겨찾기" selectedImage="star.fill" catalog="system" id="dbj-t3-2SN"/>
+                    <tabBarItem key="tabBarItem" title="즐겨찾기" image="star.fill" catalog="system" selectedImage="star.fill" id="dbj-t3-2SN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KqB-PK-8fy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,7 +75,7 @@
                             <outlet property="delegate" destination="rdx-65-leG" id="YsU-3D-vno"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="설정" selectedImage="gear" catalog="system" id="yMC-2E-9iS"/>
+                    <tabBarItem key="tabBarItem" title="설정" image="gear" catalog="system" selectedImage="gear" id="yMC-2E-9iS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRi-V7-wPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

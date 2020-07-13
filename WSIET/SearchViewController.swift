@@ -15,6 +15,8 @@ import AddressBookUI
 
 class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
 
+    @IBOutlet var myView: UIView!
+    
     // 맵의 변수 선언
     var myMap: GMSMapView!
     
@@ -92,38 +94,7 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         self.myMap?.settings.compassButton = true
         self.myMap?.settings.myLocationButton = true
         
-        
-        self.view.addSubview(self.myMap!)
-        
-        
-        /*
-        CLGeocoder().geocodeAddressString(locationName, completionHandler: { (placemarks, error) in
-            if error != nil {
-                print(error)
-                return
-            }
-            if (placemarks?.count)! > 0 {
-                
-            }
-        })
-         */
-    }
-    
-    /*
- func setNowLocation(lat: CLLocationDegrees,
-                        lon: CLLocationDegrees,
-                        delta span: Double) -> CLLocationCoordinate2D{
-        let location = CLLocationCoordinate2DMake(lat, lon)
-        let spanValue = MKCoordinateSpan(latitudeDelta: span, longitudeDelta: span)
-        let region = MKCoordinateRegion(center: location, span: spanValue)
-        //myMap.setRegion(region, animated: true)
-        
-        return location
-    }
- */
-
-    @IBAction func goNowLocation(){
-        
+        view = myMap
     }
 
 }
