@@ -13,9 +13,11 @@ import GoogleMaps
 import CoreLocation
 import AddressBookUI
 
-class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
+class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, MTMapViewDelegate {
 
     @IBOutlet var myView: UIView!
+    
+    var mapView: MTMapView?
     
     // 맵의 변수 선언
     var myMap: GMSMapView!
@@ -32,6 +34,37 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        // 정확도 설정 (최고)
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        // 사용자에게 위치제공 승인 요청
+        locationManager.requestWhenInUseAuthorization()
+        // 위치 업데이트
+        locationManager.startUpdatingLocation()
+        
+        mapView = MTMapView(frame: self.view.bounds)
+        
+        if let mapView = mapView {
+            mapView.delegate = self
+            mapView.baseMapType = .standard
+            let nowLocation: MTMapPOIItem = MTMapPOIItem.init()
+            let nowLong: Double
+            let nowLati: Double
+            if let coor = locationManager.location?.coordinate {
+                nowLong = coor.longitude
+                nowLati = coor.latitude
+                let nowMapPoint: MTMapPointGeo = MTMapPointGeo.init(latitude: nowLati, longitude: nowLong)
+                nowLocation.mapPoint = MTMapPoint.init(geoCoord: nowMapPoint)
+            }
+            nowLocation.draggable = false
+            nowLocation.markerType = MTMapPOIItemMarkerType.bluePin
+            mapView.add(nowLocation)
+            mapView.fitAreaToShowAllPOIItems()
+            mapView.showCurrentLocationMarker = true
+            self.view.addSubview(mapView)
+        }
+        
         // Do any additional setup after loading the view.
         
         /*
@@ -55,6 +88,7 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
          */
     }
     
+    /*
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
@@ -96,5 +130,6 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         
         view = myMap
     }
+    */
 
 }
