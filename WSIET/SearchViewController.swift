@@ -13,7 +13,7 @@ import GoogleMaps
 import CoreLocation
 import AddressBookUI
 
-class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, MTMapViewDelegate {
+class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, MTMapViewDelegate, XMLParserDelegate {
 
     @IBOutlet var myView: UIView!
     
@@ -32,8 +32,39 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
     // 위치 데이터를 받아오기 위한 LocationManager
     let locationManager: CLLocationManager = CLLocationManager()
     
+    func parseXml() {
+        let url = "https://www.google.co.kr/maps/search/%EC%9D%8C%EC%8B%9D%EC%A0%90/@37.5464364,126.8631848,16z/data=!4m2!2m1!6e5?hl=ko/output=xml"
+        guard let xmlParser = XMLParser(contentsOf: URL(string: url)!) else { return }
+        xmlParser.delegate = self;
+        xmlParser.parse()
+    }
+    /*
+    private func getPlaces(searchString: String) {
+      Alamofire.request(.GET,
+        "https://maps.googleapis.com/maps/api/place/autocomplete/json",
+        parameters: [
+          "input": searchString,
+          "type": "(\(placeType.description))",
+          "key": apiKey ?? ""
+        ]).responseJSON { request, response, json, error in
+          if let response = json as? NSDictionary {
+            if let predictions = response["predictions"] as? Array<AnyObject> {
+              self.places = predictions.map { (prediction: AnyObject) -> Place in
+                return Place(
+                  id: prediction["id"] as String,
+                  description: prediction["description"] as String
+                )
+              }
+            }
+          }
+
+          self.searchDisplayController?.searchResultsTableView?.reloadData()
+      }
+    }
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
+        parseXml()
         
         locationManager.delegate = self
         // 정확도 설정 (최고)
@@ -44,6 +75,8 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         locationManager.startUpdatingLocation()
         
         mapView = MTMapView(frame: self.view.bounds)
+        
+        
         
         if let mapView = mapView {
             mapView.delegate = self
